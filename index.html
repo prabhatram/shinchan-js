@@ -12,6 +12,15 @@
       width: 250px;
       cursor: pointer;
     }
+    p{
+      font-family: 'Comic Sans MS';
+      font-size: 30px;
+      color: rgb(6, 48, 153);
+    }
+    h1{
+      font-family: 'Verdana';
+      font-size: 30px;
+    }
   </style>
 </head>
 <body>
@@ -26,7 +35,7 @@
       const status = document.getElementById("status");
       if (playing) {
         shinchan.src = "assets/shinchan-paused.png";
-        status.textContent = "Shinchan is not dancing anymore. Click to make him dance.";
+        status.textContent = "Shinchan is not dancing anymore. Click to resume his dancing.";
       } else {
         shinchan.src = "assets/shinchan.gif";
         status.textContent = "Shinchan is dancing! Click to pause his dancing.";
