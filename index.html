@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shinchan - Powered by HTML, CSS, and JavaScript</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Calibri';
+    }
+    img {
+      width: 250px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Make Shinchan dance</h1>
+  <img id="shinchan" src="assets/shinchan.gif" alt="Dancing Shinchan" onclick="toggleGIF()">
+  <p id="status">Shinchan is dancing! Click to pause his dancing.</p>
+
+  <script>
+    let playing = true;
+    function toggleGIF() {
+      const shinchan = document.getElementById("shinchan");
+      const status = document.getElementById("status");
+      if (playing) {
+        shinchan.src = "assets/shinchan-paused.png";
+        status.textContent = "Shinchan is not dancing anymore. Click to make him dance.";
+      } else {
+        shinchan.src = "assets/shinchan.gif";
+        status.textContent = "Shinchan is dancing! Click to pause his dancing.";
+      }
+      playing = !playing;
+    }
+  </script>
+</body>
+</html>
